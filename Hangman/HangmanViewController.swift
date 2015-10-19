@@ -13,6 +13,7 @@ class HangmanViewController: UIViewController {
     @IBOutlet var newGameButton: UIBarButtonItem!
     @IBOutlet var guessField: UITextField!
     @IBOutlet var guessLabel: UILabel!
+    @IBOutlet var hangmanView: UIImageView!
     var HangmanState = Hangman()
     
     override func viewDidLoad() {

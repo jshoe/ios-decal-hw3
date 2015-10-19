@@ -39,19 +39,19 @@
                                     <action selector="guessLetter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wuT-1p-GL5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsW-Qp-eq1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="None" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsW-Qp-eq1">
                                 <rect key="frame" x="280" y="325" width="41" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Guesses so far:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rum-bI-rUV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Guesses so far:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rum-bI-rUV">
                                 <rect key="frame" x="238" y="282" width="119" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xjq-tK-CdW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="graphic1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xjq-tK-CdW">
                                 <rect key="frame" x="180" y="400" width="240" height="128"/>
                             </imageView>
                         </subviews>
@@ -65,6 +65,7 @@
                             <constraint firstItem="VsW-Qp-eq1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JZi-Sk-Hcx"/>
                             <constraint firstItem="VsW-Qp-eq1" firstAttribute="top" secondItem="rum-bI-rUV" secondAttribute="bottom" constant="22" id="JsO-cH-re1"/>
                             <constraint firstItem="xjq-tK-CdW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="POA-6g-d8v"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xjq-tK-CdW" secondAttribute="bottom" constant="72" id="Q0v-de-eQ8"/>
                             <constraint firstItem="VwC-7n-mqO" firstAttribute="leading" secondItem="1hx-rB-XUa" secondAttribute="leading" id="SmQ-LB-oCT"/>
                             <constraint firstItem="VyV-lf-cuz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TYg-Cv-d3Q"/>
                             <constraint firstItem="VyV-lf-cuz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="125" id="TwS-Hg-htT"/>
@@ -79,6 +80,7 @@
                     <connections>
                         <outlet property="guessField" destination="VyV-lf-cuz" id="3gh-Dl-Gpv"/>
                         <outlet property="guessLabel" destination="VsW-Qp-eq1" id="5hw-IL-cOI"/>
+                        <outlet property="hangmanView" destination="xjq-tK-CdW" id="wq5-qo-aNw"/>
                         <outlet property="newGameButton" destination="aHH-IX-pb5" id="Vcc-pA-Ipt"/>
                     </connections>
                 </viewController>
@@ -86,4 +88,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="graphic1.jpg" width="197" height="263"/>
+    </resources>
 </document>
