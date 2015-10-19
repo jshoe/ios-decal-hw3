@@ -19,7 +19,9 @@ class Hangman {
     }
     
     func start() {
+        print("Called start")
         let word = words.getRandomWord()
+        print("New word is: " + word)
         answer = word
         knownString = ""
         for (var i = 0; i < answer!.characters.count; i += 1) {
@@ -30,11 +32,14 @@ class Hangman {
             }
         }
         guessedLetters = NSMutableArray()
+        print("guessLetters: " + String(guessedLetters))
     }
     
     func guessLetter(letter: String) -> Bool {
+        print("Hangman.swift guessLetter called")
         var result = false
         if guessedLetters!.containsObject(letter) {
+            print("Letter was already guessed")
             return true
         }
         guessedLetters!.addObject(letter)
@@ -48,17 +53,19 @@ class Hangman {
             }
             
         }
+        print("Letter was in word: " + String(result))
         return result
     }
     
     func guesses() -> String {
-        if guessedLetters!.count > 0 {
+        if guessedLetters!.count == 0 {
             return ""
         }
         var result: String = guessedLetters!.objectAtIndex(0) as! String
         for (var i = 0; i < guessedLetters!.count; i += 1) {
             result = result + ", \(guessedLetters?.objectAtIndex(i))"
         }
+        print("Here are the guesses so far: " + result)
         return result
     }
 
